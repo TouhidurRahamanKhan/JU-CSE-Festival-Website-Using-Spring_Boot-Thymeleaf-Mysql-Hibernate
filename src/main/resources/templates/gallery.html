@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html class="no-js" lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<!--<![endif]-->
+
+<head>
+
+    <title> JU 1st CSE Fest 2017</title>
+
+    <!-- meta -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="Organized By CSE Society, Department of CSE, JU" />
+
+    <meta property="og:title" content="JU CSE Fest 2017" />
+    <meta property="og:url" content="#" />
+    <meta property="og:description" content="Organized By CSE Society, Department of CSE, JU" />
+    <meta property="article:author" content="CSE Society, JU" />
+    <meta property="article:publisher" content="Department of CSE, JU" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="image_src" type="image/jpeg" href="#" />
+    <link rel="icon" type="image/x-icon" href="/images/jucsefestlogo.png"/>
+    <meta property="og:image" content="#" />
+    <meta property="og:image:secure_url" content="#" />
+
+    <!-- stylesheets -->
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/magnific-popup.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/mediaelementplayer.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/masterslider.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css"/>
+
+    <link media="all" type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <link media="all" type="text/css" rel="stylesheet" href="/css/font-awesome.min.css"/>
+
+    <link media="all" type="text/css" rel="stylesheet" href="/css/owl.carousel.css"/>
+
+    <link media="all" type="text/css" rel="stylesheet" href="/css/owl.theme.css"/>
+
+    <link media="all" type="text/css" rel="stylesheet" href="/css/jquery.fancybox.min.css"/>
+
+    <link media="all" type="text/css" rel="stylesheet" href="/css/style.css"/>
+
+
+    <!-- scripts -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+
+</head>
+
+<body>
+
+    <section class="topbar" style="margin:30px 0 0 0;" >
+
+        <div id="">
+            <!-- main navigaion begin -->
+            <nav class="yamm navbar navbar-default navbar-fixed-top">
+
+                    <!-- navbar header begin -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		                    <span class="sr-only">Toggle navigation</span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </button>
+                        <a class="navbar-brand" th:href="@{/}"  style="color:white;font-size:20px">
+                			<span><img style="height:45px" src="/images/jucsefestlogo.png"/></span> JU 1st CSE Fest 2017
+                		</a>
+                    </div>
+
+                    <!-- main navigation begin -->
+                    <div class="collapse navbar-collapse navHead pull-right" id="mainMenu">
+
+                        <ul class="nav navbar-nav">
+                            <!-- HOME item: begin -->
+                            <li><a th:href="@{/}" >Home</a></li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events</a>
+                                <ul class="dropdown-menu">
+                                            <li>
+                                                <a th:href="@{/event/contest}" >Programmimg Contest</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/event/rubiksCube}">Rubik's Cube challenge</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/event/chess}">Chess competition</a>
+                                            </li>
+
+                                            <li>
+                                                <a th:href="@{/event/projectShow}">Project Showcasing</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/event/gamming}">Gaming Competition</a>
+                                            </li>
+                                        </ul>
+                                <!-- end of /.dropdown-menu -->
+                            </li>
+                            <li>
+                                <a th:href="@{/gallery}">Gallery</a>
+                            </li>
+                           
+                            <li class="dropdown drop">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a th:href="@{/register/contest}">Programmimg Contest</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/register/rubiksCubeCompetition}">Rubik's Cube challenge</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/register/chessCompetition}">Chess competition</a>
+                                            </li>
+
+                                            <li>
+                                                <a th:href="@{/register/projectShow}">Project Showcasing</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/register/gammingCompetition}">Gaming Competition</a>
+                                            </li>
+                                            
+                                        </ul>
+                                        <!-- end of /.dropdown-menu -->
+                                        
+                                    </li>
+                                    
+                                    
+                                     <li class="dropdown drop">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Participant</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a th:href="@{/display/progContest}">Programmimg Contest</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/display/rubiksCube}" >Rubik's Cube challenge</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/display/chess}" >Chess competition</a>
+                                            </li>
+
+                                            <li>
+                                                <a th:href="@{/display/projectShow}" >Project Showcasing</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/display/gamming}" >Gaming Competition</a>
+                                            </li>
+                                            
+                                        </ul>
+                                        <!-- end of /.dropdown-menu -->
+                                        
+                                    </li>
+                            
+                            <li>
+                                <a th:href="@{/contact}">Contact</a>
+                            </li>
+
+                            <li class="flat-social-icons social-back">
+                                        <a  href="https://www.facebook.com/events/171798723407928/" class="facebook social-back"  data-rel="tooltip" data-placement="bottom" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+                                    </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- main navigation FINISH -->
+
+                <!-- container FINISH -->
+
+            </nav>
+            <!-- yamm navbar navbar-default FINISH -->
+        </div>
+    </section>
+    <!-- end of header section -->
+    <div>
+
+        <div>
+            <div class="page-main no-side">
+                <!-- Gallery wrapper -->
+                <div class="grid-portfolio tj-lightbox-gallery no-padding same-ratio-items">
+
+
+                    <!-- Gallery Item -->
+                    <div class="gp-item tj-hover-5 reverse">
+                        <a href="images/1 (1).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (1).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <!-- /Gallery Item -->
+
+                    <!-- Gallery Item -->
+                    <div class="gp-item tj-hover-5 reverse">
+                        <a href="images/1 (2).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (2).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <!-- /Gallery Item -->
+
+                    <!-- Gallery Item -->
+                    <div class="gp-item tj-hover-5 reverse">
+                        <a href="images/1 (3).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (3).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <!-- /Gallery Item -->
+
+                    <!-- Gallery Item -->
+                    <div class="gp-item tj-hover-5 reverse">
+                        <a href="images/1 (4).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (4).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <!-- /Gallery Item -->
+
+
+
+
+                    <!-- Gallery Item -->
+                    <div class="gp-item tj-hover-5 reverse">
+                        <a href="images/1 (5).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (5).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <!-- /Gallery Item -->
+
+                    <!-- Gallery Item -->
+                    <div class="gp-item tj-hover-5 reverse">
+                        <a href="images/1 (6).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (6).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <!-- /Gallery Item -->
+
+                    <!-- Gallery Item -->
+                    <div class="gp-item tj-hover-5 reverse programming">
+                        <a href="images/1 (7).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (7).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <!-- /Gallery Item -->
+
+                    <!-- Gallery Item -->
+                    <div class="gp-item tj-hover-5 reverse programming">
+                        <a href="images/1 (8).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (8).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <!-- /Gallery Item -->
+
+                    <!-- Gallery Item -->
+                    <div class="gp-item tj-hover-5 reverse programming">
+                        <a href="images/1 (9).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (9).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <!-- /Gallery Item -->
+
+                    <!-- Gallery Item -->
+                    <div class="gp-item tj-hover-5 reverse programming">
+                        <a href="images/1 (10).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (10).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <!-- /Gallery Item -->
+
+                    <!-- Gallery Item -->
+                    <div class="gp-item tj-hover-5 reverse programming">
+                        <a href="images/1 (11).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (11).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+
+                    <div class="gp-item tj-hover-5 reverse programming">
+                        <a href="images/1 (12).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (12).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <div class="gp-item tj-hover-5 reverse programming">
+                        <a href="images/1 (13).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (13).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <div class="gp-item tj-hover-5 reverse programming">
+                        <a href="images/1 (14).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (14).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <div class="gp-item tj-hover-5 reverse programming">
+                        <a href="images/1 (15).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (15).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <div class="gp-item tj-hover-5 reverse programming">
+                        <a href="images/1 (16).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (16).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <div class="gp-item tj-hover-5 reverse programming">
+                        <a href="images/1 (17).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (17).JPG" alt="alt" class="img-responsive"/>
+							<!-- Item Overlay -->	
+							<div class="tj-overlay"></div>
+							<!-- /Item Overlay -->	
+						</a>
+                    </div>
+                    <!-- <div class="gp-item tj-hover-5 reverse programming">
+                        <a href="images/1 (18).JPG" class="lightbox-gallery-item">
+							<img src="images/1 (18).JPG" alt="alt" class="img-responsive"/>
+							
+							<div class="tj-overlay"></div>
+							
+						</a>
+                    </div> -->
+
+                    <!-- /Gallery Item -->
+
+
+                    <!-- /Gallery Item -->
+
+
+
+
+                </div>
+                <!-- /Gallery wrapper -->
+
+                <!-- Grid filter -->
+                <!-- <div class="fixed-filter">
+					<a href="#" class="select-filter"><i class="fa fa-filter"></i> Filter</a>
+					<ul class="grid-filters">
+						<li class="active"><a href="#" data-filter="*">all</a> 
+							<a href="#" data-filter=".programming">Programming</a> 
+							<a href="#" data-filter=".software">Hackathon</a> 
+							<a href="#" data-filter=".game">Game</a> 
+							<a href="#" data-filter=".robotics">Robotics</a> 
+													</li>
+
+					</ul>
+				</div> -->
+                <!-- /Grid filter -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery-2.1.3.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jquery core -->
+    <script type="text/javascript" src="/assets/js/vendors/jquery-1.11.0.min.js"></script>
+
+    <!-- imagesLoaded jquery plugin -->
+    <script type="text/javascript" src="/assets/js/vendors/imagesloaded.pkgd.min.js"></script>
+
+    <!-- jquery isotop plugin -->
+    <script type="text/javascript" src="/assets/js/vendors/isotope.pkgd.min.js"></script>
+
+    <!-- jquery history neede for ajax pages -->
+    <script type="text/javascript" src="/assets/js/vendors/jquery.history.js"></script>
+
+    <!-- owwwlab jquery kenburn slider plugin -->
+    <script type="text/javascript" src="/assets/js/jquery.owwwlab-kenburns.js"></script>
+
+    <!-- owwwlab jquery double carousel plugin -->
+    <script type="text/javascript" src="/assets/js/jquery.owwwlab-DoubleCarousel.js"></script>
+
+    <!-- owwwwlab jquery video background plugin -->
+    <script type="text/javascript" src="/assets/js/jquery.owwwlab-video.js"></script>
+
+    <!-- tweenmax animation framework -->
+    <script type="text/javascript" src="/assets/js/vendors/TweenMax.min.js"></script>
+
+    <!-- jquery nice scroll plugin needed for vertical portfolio page -->
+    <script type="text/javascript" src="/assets/js/vendors/jquery.nicescroll.min.js"></script>
+
+    <!-- jquery magnific popup needed for ligh-boxes -->
+    <script type="text/javascript" src="/assets/js/vendors/jquery.magnific-popup.js"></script>
+
+    <!-- html5 media player -->
+    <script type="text/javascript" src="/assets/js/vendors/mediaelement-and-player.min.js"></script>
+
+    <!-- jquery inview plugin -->
+    <script type="text/javascript" src="/assets/js/vendors/jquery.inview.min.js"></script>
+
+    <!-- smooth scroll -->
+    <script type="text/javascript" src="/assets/js/vendors/smoothscroll.js"></script>
+
+
+
+    <!-- Master Slider -->
+    <script src="/assets/masterslider/jquery.easing.min.js"></script>
+    <script src="/assets/masterslider/masterslider.min.js"></script>
+
+    <!-- theme custom scripts -->
+    <script type="text/javascript" src="/assets/js/custom.js"></script>
+
+</body>
+
+</html>

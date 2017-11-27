@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header"/>
+<body roleId="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<head th:replace="common/header :: navbar"/>
+
+<div style="margin:70px 0 0 0;">
+
+
+<div class="container">
+    <div class="row main">
+        <div class="panel-heading">
+            <div class="panel-title text-center">
+                <h1 class="title">Rubiks Cube Competition Registration Form</h1>
+                
+                
+                <div class="bg-success font-weight-bold text-success" th:text="${#httpServletRequest.getParameter('successMessage')}" 
+					     th:unless="${#httpServletRequest.getParameter('successMessage') == null}">
+					   Registration Complete
+					</div>
+					
+					
+                <hr />
+            </div>
+        </div>
+        <div class="main-login main-center">
+            <form class="form-horizontal" method="post" th:action="@{/register/rubiksCubeCompetition}">
+
+
+
+
+                <div class="form-group" >
+                    <label for="transferFrom">Select Batch :</label>
+                    <select class="form-control"   th:field="*{team.batch}"   id="batch" required="required">
+                        
+                        
+                        <option th:each="ba : ${batchList}" 
+								  th:value="${ba.value}" 
+								  th:text="${ba.key}" />
+                    </select>
+                    <br />
+                </div>
+                
+                
+                
+                
+
+                <div class="form-group">
+                    <label for="teamName" class="cols-sm-2 control-label">User Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" th:value="${team.userName}" id="teamName" name="userName" roleId="teamName"  placeholder="Enter your team name" required="required"/>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+               <div class="form-group" >
+                    <label for="transferFrom">Select Department :</label>
+                    <select class="form-control" th:value="${team.department}" name="department" id="department" required="required">
+                       
+                        
+                        <option th:each="de : ${departmentList}" 
+								  th:value="${de.value}" 
+								  th:text="${de.key}" />
+                    </select>
+                    <br />
+                </div>
+                
+                
+                
+                
+               <div class="form-group" >
+                    <label for="transferFrom">Select T-Shirt Size :</label>
+                    <select class="form-control" th:field="*{team.tShirtSize}"  required="required">
+                       
+                        
+                        <option th:each="s : ${tsize}" 
+								  th:value="${s.value}" 
+								  th:text="${s.key}" />
+                    </select>
+                    <br />
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="form-group">
+                    <label for="member1Email" class="cols-sm-2 control-label">Email :</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="email" class="form-control" th:field="*{team.email}" id="email"   placeholder="Enter your  email" required="required"/>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                 <div class="form-group">
+                    <label for="member1Email" class="cols-sm-2 control-label">Mobile :</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" th:field="*{team.mobileNumber}" id="email"  roleId="teamName"  placeholder="Enter your  email" required="required"/>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+
+               
+
+                <div class="form-group ">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register!</button>
+                </div>
+                
+                <hr />
+                
+				<div class="form-group ">
+                    <a  class="btn btn-info btn-lg btn-block login-button" th:href="@{/}">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<div th:replace="common/header :: body-bottom-scripts" />
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header"/>
+
+
+
+
+<body onload="countdown(2017,08,04,09,00)">
+
+    <section class="header">
+        <div id="window-height">
+            <div class="heading-wrapper">
+
+
+
+                <div id="navigation">
+                    <!-- main navigaion begin -->
+                    <nav class="yamm navbar navbar-default ">
+                        <div class="">
+                            <!-- navbar header begin -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                                <a class="navbar-brand" th:href="@{/}" style="color:white;font-size:20px">
+                <span><img style="height:45px" src="/images/jucsefestlogo.png"/></span> JU 1st CSE Fest 2017
+                </a>
+                            </div>
+
+                            <!-- main navigation begin -->
+                            <div class="collapse navbar-collapse navHead pull-right" id="mainMenu">
+
+                                <ul class="nav navbar-nav">
+                                    <!-- HOME item: begin -->
+                                    <li><a th:href="@{/}" >Home</a></li>
+                                    <li class="dropdown drop">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a  th:href="@{/event/contest}" >Programmimg Contest</a>
+                                            </li>
+                                            <li>
+                                                 <a   th:href="@{/event/rubiksCube}">Rubik's Cube challenge</a>
+                                            </li>
+                                            <li>
+                                                <a  th:href="@{/event/chess}" >Chess competition</a>
+                                            </li>
+
+                                            <li>
+                                               <a th:href="@{/event/projectShow}" >Project Showcasing</a>
+                                            </li>
+                                            <li>
+                                                <a  th:href="@{/event/gamming}" >Gaming Competition</a>
+                                            </li>
+                                           </ul>
+                                        
+                                        </li>
+                                        <!-- end of /.dropdown-menu -->
+                                       
+                                    
+                                    <li>
+                                       <a th:href="@{/gallery}">Gallery</a>
+                                    </li>
+                                    
+									
+									
+									<li class="dropdown drop">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a th:href="@{/register/contest}">Programmimg Contest</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/register/rubiksCubeCompetition}">Rubik's Cube challenge</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/register/chessCompetition}">Chess competition</a>
+                                            </li>
+
+                                            <li>
+                                              <a th:href="@{/register/projectShow}">Project Showcasing</a>
+                                            </li>
+                                            <li>
+                                               <a th:href="@{/register/gammingCompetition}">Gaming Competition</a>
+                                            </li>
+                                            
+                                        </ul>
+                                        <!-- end of /.dropdown-menu -->
+                                        
+                                    </li>
+									
+									 <li class="dropdown drop">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Participant</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a th:href="@{/display/progContest}">Programmimg Contest</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/display/rubiksCube}" >Rubik's Cube challenge</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/display/chess}" >Chess competition</a>
+                                            </li>
+
+                                            <li>
+                                                <a th:href="@{/display/projectShow}" >Project Showcasing</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/display/gamming}" >Gaming Competition</a>
+                                            </li>
+                                            
+                                        </ul>
+                                        <!-- end of /.dropdown-menu -->
+                                        
+                                    </li>
+									
+									
+                                    <li>
+                                         <a  th:href="@{/contact}">Contact</a>
+                                    </li>
+
+
+                                    <li class="flat-social-icons social-back">
+                                        <a  href="https://www.facebook.com/events/171798723407928/" class="facebook social-back"  data-rel="tooltip" data-placement="bottom" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+                                    </li>
+
+
+                                    <!-- social icon FINISH -->
+                                </ul> 
+                            </div>
+
+
+                        </div>
+                        <!-- main navigation FINISH -->
+
+
+                    </nav>
+                    <!-- yamm navbar navbar-default FINISH -->
+                </div>
+
+                <div class="heading-content text-center">
+                    <div class="timer">
+                        <div class="container">
+
+
+                            <div class="row">
+                                <h1>
+                                    <!-- <a href="#" class="btn btn-black">Register Now</a> Show your talent in festive mood-->
+                                </h1>
+                            </div>
+
+
+
+                            <a th:href="@{/event/contest}" class="btn btn-registeration text-capitalize">
+                            Programming Contest
+                        </a>
+                            <a  th:href="@{/event/rubiksCube}"  class="btn btn-registeration text-capitalize">
+                            Rubik's Cube challenge
+                        </a>
+                            <a th:href="@{/event/chess}" class="btn btn-registeration text-capitalize">
+                            Chess competition
+                        </a>
+                            <a th:href="@{/event/projectShow}" class="btn btn-registeration text-capitalize">
+                            Project Showcasing
+                        </a>
+                            <a th:href="@{/event/gamming}" class="btn btn-registeration text-capitalize">
+                            Gaming Competition
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div style=" margin-top: 320px;">
+        <section id="service">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-12" style="    margin-top: 0px;">
+                            <h2>About The Event
+                                <small>You need to do is very simple just join us</small>
+                            </h2>
+                        </div>
+                        <div class="text-center">
+                            <p>Hello JU, 
+We are the students of 42 batch, department of CSE from Jahangirnagar University. Here, we are bringing a platform to show and practice your skills on brainstorming and many other intellectual events. If you need a platform to show your hidden talents, this is a perfect occasion to show off yourself. This event might also trigger your passion in any of the skills or challenges that you will face. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-container">
+                            <div class="service-icon">
+                                <a  th:href="@{/contact}" ><i class="fa fa-users"></i></a>
+                            </div>
+                            <div class="service-content">
+                                <h3>Our Organizers</h3>
+                                <hr class="hover-extend"/>
+                                <p>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-container">
+                            <div class="service-icon">
+                                <a  th:href="@{/contact}" ><i class="fa fa-home"></i></a>
+                            </div>
+                            <div class="service-content">
+                                <h3>Our Venue</h3>
+                                <hr class="hover-extend"/>
+                                <p>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-container">
+                            <div class="service-icon">
+                                <a  th:href="@{/contact}" ><i class="fa fa-thumbs-up"></i></a>
+                            </div>
+                            <div class="service-content">
+                                <h3>24/7 Support</h3>
+                                <hr class="hover-extend"/>
+                                <p>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                                <h1>
+                                   
+                                </h1>
+                            </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+</body>
+
+
+<a href="#top" class="back_to_top" style="display: block;"><img src="/images/back_to_top.png" alt="back to top"/></a>
+
+<div th:replace="common/header :: body-bottom-footer"/>
+<div th:replace="common/header :: body-bottom-scripts"/>
+
+</html>

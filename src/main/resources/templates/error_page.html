@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header"/>
+<body roleId="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<head th:replace="common/header :: navbar"/>
+
+    
+    
+    <header>
+
+        <div class="header-wrapper">
+            <img style="width: 100%;" src="images/contactus.png"/>
+        </div> <!-- /.header-wrapper -->
+    </header> <!-- /.page-head (header end) -->
+
+
+           <section class="quick-registration-link" align="center">
+             <h1>Server Error Please Contact With Us.</h1>
+            </section>
+   
+
+
+
+    <!-- contact adresses section begin -->
+    <div class="main-content">
+        <div class="container">
+
+            
+
+
+            <h2>Organizer</h2>
+            <section class="contact-address bg-white">
+                <div class="row">
+
+                    <div class="col-md-4 col-xs-12">
+                        <div class="address-info">
+                            <div class="row">
+
+                                <div class="col-md-3 col-xs-3">
+                                    <div class="address-info-icon text-center center-block bg-light-gray">
+                                        <i class="fa fa-user"></i>
+                                    </div> <!-- /.address-info-icon -->
+                                </div>
+
+                                <div class="col-md-9 col-xs-9 address-info-desc">
+                                    <h3>Mahbubur Rahman</h3>
+                                    <p>
+                                       <i class="fa fa-phone"></i> 01824406269
+                                    </p>
+                                    <p>
+                                       <i class="fa fa-envelope"></i> mahbuburrrahman2111@gmail.com
+                                    </p>
+                                </div> <!-- /.address-info-desc -->
+
+                            </div>
+                        </div> <!-- /.address-info -->
+                    </div>
+
+                    <div class="col-md-4 col-xs-12">
+                        <div class="address-info">
+                            <div class="row">
+
+                                <div class="col-md-3 col-xs-3">
+                                    <div class="address-info-icon text-center center-block bg-light-gray">
+                                        <i class="fa fa-user"></i>
+                                    </div> <!-- /.address-info-icon -->
+                                </div>
+
+                                <div class="col-md-9 col-xs-9 address-info-desc">
+                                    <h3>Ashin Abid</h3>
+                                    <p>
+                                       <i class="fa fa-phone"></i> 01757430343
+                                    </p>
+                                    <p>
+                                       <i class="fa fa-envelope"></i> ahsinabid@gmail.com
+                                    </p>
+                                </div> <!-- /.address-info-desc -->
+
+                            </div>
+                        </div> <!-- /.address-info -->
+                    </div>
+
+                    <div class="col-md-4 col-xs-12">
+                        <div class="address-info">
+                            <div class="row">
+
+                                <div class="col-md-3 col-xs-3">
+                                    <div class="address-info-icon text-center center-block bg-light-gray">
+                                        <i class="fa fa-user"></i>
+                                    </div> <!-- /.address-info-icon -->
+                                </div>
+
+                                <div class="col-md-9 col-xs-9 address-info-desc">
+                                    <h3>Monikrishna Roy</h3>
+                                    <p>
+                                       <i class="fa fa-phone"></i> 01776934196
+                                    </p>
+                                    <p>
+                                       <i class="fa fa-envelope"></i> roy.moni.ju.cse@gmail.com
+                                    </p>
+                                </div> <!-- /.address-info-desc -->
+
+                            </div>
+                        </div> <!-- /.address-info -->
+                    </div>
+
+                </div>
+            </section> <!-- /.contact-address -->
+
+            <!-- google map iframe -->
+            <section class="g-map">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="google-map">
+                            <div id="map-canvas"></div>
+                        </div>
+                    </div>
+                </div>
+            </section> <!-- /.g-map (google-map end) -->
+
+            <script>
+                function initialize() {
+                    var mapCanvas = document.getElementById('map-canvas');
+                    var mapOptions = {
+                        center: new google.maps.LatLng(23.8773821, 90.2661394),
+                        zoom: 17,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    }
+                    var map = new google.maps.Map(mapCanvas, mapOptions)
+
+                    var marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(23.8773821, 90.2661394),
+                        title:"Jahangirnagar University"
+                    });
+
+                    // To add the marker to the map, call setMap();
+                    marker.setMap(map);
+                }
+
+                google.maps.event.addDomListener(window, 'load', initialize);
+            </script>
+
+
+
+        </div>
+    </div>
+            
+
+
+   <div th:replace="common/header :: body-bottom-footer"/>
+<div th:replace="common/header :: body-bottom-scripts"/>
+   
+
+</body>
+
+</html>
